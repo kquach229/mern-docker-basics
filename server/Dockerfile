@@ -1,11 +1,11 @@
-FROM node:10.16-alpine
+FROM node:10.9.0
 
 # Create App Directory
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 # Install Dependencies
-COPY package*.json ./
+COPY package.json ./
 
 RUN npm install --silent
 
